@@ -1,0 +1,8 @@
+[gd_scene format=2]
+
+[node name="Snake" type="Area2D"]
+
+[node name="Polygon" type="Polygon2D" parent="."]
+scale = Vector2( 0.5, 0.5 )
+color = Color( 0.239216, 0.898039, 0.403922, 1 )
+polygon = PoolVector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )

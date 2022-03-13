@@ -1,0 +1,78 @@
+[gd_scene format=2]
+
+[node name="MDEditor" type="RichTextLabel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "*斜体* 	-> [i]{text}[/i] 	*just*
+
+**粗体** -> [b]{text}[/b] 	**just**
+
+~~删除线~~ -> [s]{text}[/s] 	~~just~~
+
+[链接](http://a) ->[color=blue] [url=<url>]{text}[/url] [/color] 						 just
+
+![图片说明](https://bkimg.cdn.bcebos.com/pic/faf2b2119313b07eca80d705979e862397dda144262e?x-bce-process=image/resize,m_lfit,w_268,limit_1/format,f_jpg) -> [img]{path}[/img] + [center]{text}[/center] just
+
+`内联代码` 的使用 -> [code]{text}[/code]		just
+
+```ruby
+def inc(x) # -> [code]{text}[/code]			just
+	x+1
+```
+
+> 引用  \">\"后需加空格 以一个空行分割
+-> [indent]{text}[/indent] 					> SP text BL
+
+
+# 一级标题 -> [b][i] [/i][/b] 				# SP text RT
+
+----------- 
+-> [s]      [/s] 							-* RT
+
+
++ 无序列表
+114
+->  [b]. text[/b]
+	[table=1]	[cell][indent]114[/indent][/cell]	[/table]
+Ul = Head textlines Tail
+Head = + SP text
+Tail = 2BL | Head
+
+1. 列表1
+114
+->  [b]N. text[/b]
+	[table=1]	[cell][indent]114[/indent][/cell]	[/table]
+Ol = Head textlines Tail
+Head = NUM. SP text
+Tail = 2BL | Head
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#标题 -> ?
+	1. find [?] use bold&itic
+	2. 直接设置字体文件大小 -> !每个大小都是个字体文件
+	3. 加载后设置大小 
+	4. [b][i] [/i][/b] -> ！只要一种大小
+
+
+	每个大小都是个字体文件
+
+
+
+
+
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}

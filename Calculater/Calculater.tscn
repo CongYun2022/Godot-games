@@ -1,0 +1,236 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/Yahei_Monaco.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Calculater.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=2]
+default_font = SubResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.156863, 0.152941, 0.152941, 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 20
+font_data = ExtResource( 1 )
+
+[node name="Calculater" type="MarginContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = SubResource( 2 )
+custom_constants/margin_right = 5
+custom_constants/margin_top = 10
+custom_constants/margin_left = 5
+custom_constants/margin_bottom = 10
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Express" type="VBoxContainer" parent="."]
+margin_left = 5.0
+margin_top = 10.0
+margin_right = 255.0
+margin_bottom = 340.0
+custom_constants/separation = 20
+
+[node name="Result" type="MarginContainer" parent="Express"]
+margin_right = 250.0
+margin_bottom = 40.0
+
+[node name="Label" type="Label" parent="Express/Result"]
+margin_right = 250.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 0, 40 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
+valign = 1
+
+[node name="ControlPanel" type="MarginContainer" parent="Express"]
+margin_top = 60.0
+margin_right = 250.0
+margin_bottom = 330.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 5
+custom_constants/margin_left = 5
+
+[node name="Numbers" type="VBoxContainer" parent="Express/ControlPanel"]
+margin_left = 5.0
+margin_right = 245.0
+margin_bottom = 270.0
+size_flags_horizontal = 7
+size_flags_vertical = 3
+custom_constants/separation = 12
+
+[node name="ButtonLine1" type="HBoxContainer" parent="Express/ControlPanel/Numbers"]
+margin_right = 240.0
+margin_bottom = 44.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 20
+
+[node name="Button1" type="Button" parent="Express/ControlPanel/Numbers/ButtonLine1"]
+margin_right = 45.0
+margin_bottom = 44.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "1"
+
+[node name="Button2" type="Button" parent="Express/ControlPanel/Numbers/ButtonLine1"]
+margin_left = 65.0
+margin_right = 110.0
+margin_bottom = 44.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "2"
+
+[node name="Button3" type="Button" parent="Express/ControlPanel/Numbers/ButtonLine1"]
+margin_left = 130.0
+margin_right = 175.0
+margin_bottom = 44.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "3"
+
+[node name="ButtonAdd" type="Button" parent="Express/ControlPanel/Numbers/ButtonLine1"]
+margin_left = 195.0
+margin_right = 240.0
+margin_bottom = 44.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "+"
+
+[node name="ButtonLine2" type="HBoxContainer" parent="Express/ControlPanel/Numbers"]
+margin_top = 56.0
+margin_right = 240.0
+margin_bottom = 100.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 20
+
+[node name="Button4" type="Button" parent="Express/ControlPanel/Numbers/ButtonLine2"]
+margin_right = 45.0
+margin_bottom = 44.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "4"
+
+[node name="Button5" type="Button" parent="Express/ControlPanel/Numbers/ButtonLine2"]
+margin_left = 65.0
+margin_right = 110.0
+margin_bottom = 44.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "5"
+
+[node name="Button6" type="Button" parent="Express/ControlPanel/Numbers/ButtonLine2"]
+margin_left = 130.0
+margin_right = 175.0
+margin_bottom = 44.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "6"
+
+[node name="ButtonSub" type="Button" parent="Express/ControlPanel/Numbers/ButtonLine2"]
+margin_left = 195.0
+margin_right = 240.0
+margin_bottom = 44.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "-"
+
+[node name="ButtonLine3" type="HBoxContainer" parent="Express/ControlPanel/Numbers"]
+margin_top = 112.0
+margin_right = 240.0
+margin_bottom = 157.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 20
+
+[node name="Button7" type="Button" parent="Express/ControlPanel/Numbers/ButtonLine3"]
+margin_right = 45.0
+margin_bottom = 45.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "7"
+
+[node name="Button8" type="Button" parent="Express/ControlPanel/Numbers/ButtonLine3"]
+margin_left = 65.0
+margin_right = 110.0
+margin_bottom = 45.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "8"
+
+[node name="Button9" type="Button" parent="Express/ControlPanel/Numbers/ButtonLine3"]
+margin_left = 130.0
+margin_right = 175.0
+margin_bottom = 45.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "9"
+
+[node name="ButtonMul" type="Button" parent="Express/ControlPanel/Numbers/ButtonLine3"]
+margin_left = 195.0
+margin_right = 240.0
+margin_bottom = 45.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "*"
+
+[node name="ButtonLine5" type="HBoxContainer" parent="Express/ControlPanel/Numbers"]
+margin_top = 169.0
+margin_right = 240.0
+margin_bottom = 213.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 20
+
+[node name="ButtonC" type="Button" parent="Express/ControlPanel/Numbers/ButtonLine5"]
+margin_right = 45.0
+margin_bottom = 44.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "C"
+
+[node name="Button0" type="Button" parent="Express/ControlPanel/Numbers/ButtonLine5"]
+margin_left = 65.0
+margin_right = 110.0
+margin_bottom = 44.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "0"
+
+[node name="ButtonDot" type="Button" parent="Express/ControlPanel/Numbers/ButtonLine5"]
+margin_left = 130.0
+margin_right = 175.0
+margin_bottom = 44.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "."
+
+[node name="ButtonDiv" type="Button" parent="Express/ControlPanel/Numbers/ButtonLine5"]
+margin_left = 195.0
+margin_right = 240.0
+margin_bottom = 44.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "/"
+
+[node name="ButtonLine6" type="HBoxContainer" parent="Express/ControlPanel/Numbers"]
+margin_top = 225.0
+margin_right = 240.0
+margin_bottom = 270.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 20
+
+[node name="ButtonEq" type="Button" parent="Express/ControlPanel/Numbers/ButtonLine6"]
+margin_right = 240.0
+margin_bottom = 45.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "="
